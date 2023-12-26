@@ -7,13 +7,15 @@ using namespace std;
 
 class Area{
 protected:
-   int width;
-   int height;
+   int w,h;
    public:
-          Area(int w,int h)
+          void parameters()
           {
-          	width=w;
-          	height=h;
+          	cout<<"\n\n Enter the width :";
+ 			cin>>w;
+ 	
+ 			cout<<"\n\n Enter the height :";
+ 			cin>>h;
 		  }
 };
 
@@ -22,20 +24,16 @@ class rectangle: public Area
     public:
     int getarea () 
 	{
-        return (width*height);
+        return (w*h);
     }
 };
 
  main()
  {
  	int w,h;
- 	cout<<"\n\n Enter the width :";
- 	cin>>w;
  	
- 	cout<<"\n\n Enter the height :";
- 	cin>>h;
-    rectangle r(w,h);
-    
+    rectangle r;
+    r.parameters();
     
     cout <<"\n\n total area: " <<r.getarea() ;
     
